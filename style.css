@@ -1,0 +1,201 @@
+:root {
+  --laranja-principal: rgba(239, 100, 53, 1);
+  --orange-hover: rgb(241, 181, 161);
+}
+
+/*Fontes
+Nav
+font-family: 'Bubblegum Sans', cursive;
+*/
+
+body {
+  margin: 0;
+}
+/*---------------------------------------------------------------------------*/
+
+/*HEADER*/
+
+.header-container {
+  background-color: var(--laranja-principal);
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 100px;
+  margin-left: 30px;
+}
+
+/*Navegação*/
+
+.nav-container{
+  align-items: center;
+  display: flex;
+}
+
+.nav-container ul {
+  padding: 0;
+  padding-right: 30px;
+}
+
+.nav-container li {
+  display: inline;
+  padding: 15px;
+  list-style: none;
+}
+
+.nav-container li:hover {
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 13px;
+  background-color: rgba(255, 255, 255, 0.91);
+}
+
+.nav-container li:hover a {
+  color: rgba(239, 100, 53, 1)
+}
+
+.nav-container li a {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-family: 'Bubblegum Sans', cursive;
+}
+
+/*------------------------------------------------------------------------*/
+
+/*Banner*/
+
+.banner-container {
+  text-align: center;
+  background-color: rgb(229, 228, 228);
+  padding-top: 60px;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.banner-container img {
+  max-height: 75%;
+  max-width: 75%;
+  border-radius: 5px;
+}
+
+.banner-container h1 {
+  z-index: 10;
+  position: relative;
+  bottom: 150px;
+  font-family: 'Bubblegum Sans', cursive;
+  letter-spacing: 3px;
+  font-size: 3rem;
+}
+
+/*--------------------------------------------------------------------------*/
+
+/*Seção de cursos*/
+
+.cursos-container {
+  margin-bottom: 50px;
+}
+
+.cursos-container h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: 'Bubblegum Sans', cursive;
+}
+
+.cursos-cards-container {
+  display: grid;
+  grid-template-columns: 40px repeat(6, 1fr) 40px;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 30px;
+  align-items: center;
+}
+
+.card {
+  text-align: justify;
+}
+
+/*Estilização dos cards*/
+
+.card {
+  background-color: #f0a041;
+  color: #fff;
+  border-radius: 10px;
+  filter: grayscale(50%);
+  padding: 0 20px;
+}
+
+.card h3 {
+  font-family: 'Bubblegum Sans', cursive;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.card p {
+  font-size: 1.25rem;
+}
+
+.card:hover {
+  filter: none;
+  cursor: pointer;
+}
+
+/*posicionamento dos cards dentro do grid*/
+
+.card.primeiro{
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row: 1 / 2;
+}
+
+.card.segundo{
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row: 1 / 2;
+}
+
+.card.terceiro {
+  grid-column-start: 6;
+  grid-column-end: 8;
+  grid-row: 1 / 2;
+}
+
+.card.quarto {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row: 2 / 3;
+}
+
+.card.quinto {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row: 2 / 3;
+}
+
+.card.sexto {
+  grid-column-start: 6;
+  grid-column-end: 8;
+  grid-row: 2 / 3;
+}
+/*-------------------------------------------------------------------------------*/
+
+/*Footer*/
+
+.footer-container {
+  display: flex;
+  background-color: var(--laranja-principal);
+}
+
+.footer-container img {
+ display: relative;
+ margin-left: 30px;
+}
+
+
+.footer-container p {
+  color: #fff;
+  display: inline;
+  align-self: center;
+  margin: 0 auto;
+  transform: translateX(-50%);
+}
