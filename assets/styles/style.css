@@ -1,0 +1,373 @@
+:root {
+  --laranja-principal: rgba(239, 100, 53, 1);
+  --orange-hover: rgb(241, 181, 161);
+}
+
+/*Fontes
+Nav
+font-family: 'Bubblegum Sans', cursive;
+*/
+
+body {
+  margin: 0;
+}
+/*---------------------------------------------------------------------------*/
+
+/*HEADER*/
+
+.header-container {
+  background-color: var(--laranja-principal);
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top:0;
+  width: 100vw;
+  z-index: 100;
+}
+
+.logo {
+  height: 100px;
+  margin-left: 30px;
+}
+
+/*Navegação*/
+
+.nav-container{
+  align-items: center;
+  display: flex;
+}
+
+.nav-container ul {
+  padding: 0;
+  padding-right: 30px;
+}
+
+.nav-container li {
+  display: inline;
+  padding: 15px;
+  list-style: none;
+}
+
+.nav-container li:hover {
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 13px;
+  background-color: rgba(255, 255, 255, 0.91);
+}
+
+.nav-container li:hover a {
+  color: rgba(239, 100, 53, 1);
+}
+
+.nav-container li a {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-family: 'Bubblegum Sans', cursive;
+}
+
+/*------------------------------------------------------------------------*/
+
+
+/*Banner*/
+
+.banner-container {
+  margin-top: 100px;
+  text-align: center;
+  background-color: rgb(229, 228, 228);
+  padding-top: 60px;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.banner-container img {
+  max-height: 75%;
+  max-width: 75%;
+  border-radius: 5px;
+}
+
+.banner-container h1 {
+  z-index: 10;
+  position: relative;
+  bottom: 150px;
+  font-family: 'Bubblegum Sans', cursive;
+  letter-spacing: 3px;
+  font-size: 3rem;
+}
+
+/*--------------------------------------------------------------------------*/
+
+/*Seção de cursos*/
+
+/*Container de todos os cursos*/
+
+.cursos-container {
+  margin-bottom: 50px;
+  justify-items: center;
+}
+
+/*título Nossos Cursos*/
+
+.cursos-container h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: 'Bubblegum Sans', cursive;
+}
+
+/*container dos cards*/
+.cursos-cards-container {
+  display: grid;
+  /*adicionei minmax para ele nunca modificar o tamanho das colunas*/
+  grid-template-columns: repeat(2, auto) ;
+  grid-template-rows: repeat(6, auto);
+  justify-items: center;
+  gap: 30px; 
+  margin: 0 auto;
+  align-items: center;
+}
+
+
+/*Estilização dos cards*/
+
+.card {
+  background-color: #f0a041;
+  color: #fff;
+  border-radius: 10px;
+  filter: grayscale(50%);
+  padding: 0 20px;
+  max-width: 400px;
+  display: grid;
+  grid-template-rows: 300px 50px auto auto 70px;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+}
+
+/*Container das imagens dos cards e estilização das imagens / posicionamento*/
+.card-img-container {
+  width: 100%;
+  grid-area: 1 / 1 / 2 / 3;
+  margin: 30px auto 20px;
+}
+
+.card-img-container img{
+  width: auto;
+  height: 100%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+/*Estilização e posicionamento dos textos dos cards*/
+
+.card h3 {
+  font-family: 'Bubblegum Sans', cursive;
+  text-align: center;
+  font-size: 1.75rem;
+  grid-area: 2 / 1 / 3 / 3;
+  margin: 0;
+  align-self: center;
+}
+
+.card .descricao {
+  font-size: 1.25rem;
+  grid-area: 3 / 1 / 4 / 3;
+  text-align: justify;
+}
+
+.card .carga-horaria {
+  grid-area: 4 / 1 / 5 / 2;
+  font-size: 1.25rem;
+  align-self: center;
+}
+
+/*Relógio antes da carga horária so adicionado se tiver pelo menos 400px de largura*/
+@media screen and (min-width:400px){
+ 
+.card .carga-horaria::before {
+  background-image: url('./assets/imagens/cursos/clock.png');
+  filter: opacity(0.5);
+  background-size: 30px 30px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  content: '';
+  position: absolute;
+  left: 10px;
+  transform: translateY(-5px);
+}
+}
+
+.card .idade {
+  align-self: center;
+  font-size: 1.25rem;
+}
+
+.card .valor {
+  grid-area: 5 / 1 / 6 / 3;
+  align-self: start;
+  font-size: 1.25rem;
+}
+
+.card:hover {
+  filter: none;
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: all 0.5s ease-in-out;
+}
+
+/*posicionamento dos cards dentro do grid*/
+
+.card.primeiro{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 1 / 2;
+}
+
+.card.segundo{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 2 / 3;
+}
+
+.card.terceiro {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 3 / 4;
+}
+
+.card.quarto {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 4 / 5;
+}
+
+.card.quinto {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 5 / 6;
+}
+
+.card.sexto {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 6 / 7;
+}
+
+
+/*Responsividade para os cursos*/
+@media screen and (min-width: 920px) {
+  .cursos-cards-container {
+    grid-template-columns: repeat(4, minmax(1fr));
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+  }
+
+  .card.primeiro{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 1 / 2;
+  }
+  
+  .card.segundo {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row: 1 / 2;
+  }
+  
+  .card.terceiro {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 2 / 3;
+  }
+  
+  .card.quarto {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row: 2 / 3;
+  }
+  
+  .card.quinto {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 3 / 4;
+  }
+  
+  .card.sexto {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row: 3 / 4;
+  }
+
+ 
+
+}
+/* 
+ menor opção */
+
+
+@media screen and (min-width: 1430px) {
+  .cursos-cards-container {
+    
+    /*adicionei minmax para ele nunca modificar o tamanho das colunas*/
+    grid-template-columns: repeat(6, minmax(1fr)) ;
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .card.primeiro{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 1 / 2;
+  }
+  
+  .card.segundo{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row: 1 / 2;
+  }
+  
+  .card.terceiro {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row: 1 / 2;
+  }
+  
+  .card.quarto {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 2 / 3;
+  }
+  
+  .card.quinto {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row: 2 / 3;
+  }
+  
+  .card.sexto {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row: 2 / 3;
+  }
+}
+
+
+/*-------------------------------------------------------------------------------*/
+
+/*Footer*/
+
+.footer-container {
+  display: flex;
+  background-color: var(--laranja-principal);
+}
+
+.footer-container img {
+ display: relative;
+ margin-left: 30px;
+}
+
+.footer-container p {
+  color: #fff;
+  display: inline;
+  align-self: center;
+  margin: 0 auto;
+  transform: translateX(-50%);
+}
