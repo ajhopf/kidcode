@@ -1,0 +1,145 @@
+/*HEADER*/
+
+.header-container {
+  background-color: var(--laranja-principal);
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top:0;
+  width: 100vw;
+  z-index: 100;
+}
+
+.logo {
+  height: 100px;
+  margin-left: 30px;
+}
+
+/*Navegação*/
+
+.nav-container{
+  align-items: center;
+  display: flex;
+}
+
+.nav-container ul {
+  position: absolute;
+  right: 10px;
+  padding: 0;
+  padding-right: 30px;
+}
+
+.nav-container li {
+  display: inline;
+  padding: 15px;
+  list-style: none;
+}
+
+.nav-container li:hover {
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 13px;
+  background-color: rgba(255, 255, 255, 0.91);
+}
+
+.nav-container li:hover a {
+  color: rgba(239, 100, 53, 1);
+}
+
+.nav-container li a {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-family: 'Bubblegum Sans', cursive;
+}
+
+/*Parte referente ao menu hamburguer*/
+
+/*Tamanho e estilo das barrinhas*/
+.menu-toggle .bar {
+  width: 45px;
+  height: 3px;
+  margin: 8px auto;
+  transition: all 0.3s ease-in-out;
+  background: #FFF;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 1035px) {
+  
+  /*Declarar position como relative no nav-container para poder posicionar seu filhos relativo a ele*/
+  .nav-container {
+    position: relative;
+  }
+
+  .nav-container ul {
+    /*initial = static*/
+    position: initial;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-container {
+    display: grid;
+    grid-template-columns: auto;
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    /*esconder o menu para a esquerda -> irá aparecer quando clicado, olhar texto abaixo*/
+    left: -100%;
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+
+  /*esta parte é para o javascript, que transformará a classe em ativa quando o menu hamburguer for clicado*/
+
+  .nav-container.active{
+    background: grey;
+    left: 0;    
+    opacity: 1;
+    transition: all 0.5s ease;    ;
+  }
+
+  /*Fazendo com que os itens fiquem um em cima do outro e ocupem 100% da tela*/
+  .nav-container li {
+    text-align: center;
+    line-height: 60px;
+    width: 100%;
+    display: table;
+    padding: 15px 0;
+  }
+
+  .nav-container.active li:hover {
+  border: none;
+  border-radius: 0px;
+  background-color: rgba(255, 255, 255, 0.91);
+  padding: 15px 0;
+}
+  
+
+  /*Ajustando a posição do menu hamburguer*/
+  .menu-toggle {
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    cursor: pointer;
+  }
+  /*Transforma o diplay de inline para block, fazendo com que ele apareça mesmo sem */
+  .menu-toggle .bar {
+    display: block;
+  }
+
+  /*balaca no menu hamburguer, fazendo com que ele forme um X quando estiver clicado*/
+  #mobile-menu.is-active .bar:nth-child(2){
+    opacity: 0;
+  }
+
+  #mobile-menu.is-active .bar:nth-child(1){
+    transform: translateY(11px) rotate(45deg)
+  }
+
+  #mobile-menu.is-active .bar:nth-child(3){
+    transform: translateY(-11px) rotate(-45deg)
+  }
+
+}

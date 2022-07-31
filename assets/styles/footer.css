@@ -1,0 +1,20 @@
+
+/*Footer*/
+
+.footer-container {
+  display: flex;
+  background-color: var(--laranja-principal);
+}
+
+.footer-container img {
+ display: relative;
+ margin-left: 30px;
+}
+
+.footer-container p {
+  color: #fff;
+  display: inline;
+  align-self: center;
+  margin: 0 auto;
+  transform: translateX(-50%);
+}

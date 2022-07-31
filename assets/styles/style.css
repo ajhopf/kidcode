@@ -8,91 +8,60 @@ Nav
 font-family: 'Bubblegum Sans', cursive;
 */
 
-body {
+html, body {
   margin: 0;
+  /*Esta parte é para não criar scroll para a direita, que estava acontecendo em alguns tamanhos de tela*/
+  max-width: 100%;
+  overflow-x: hidden;
 }
+
 /*---------------------------------------------------------------------------*/
-
-/*HEADER*/
-
-.header-container {
-  background-color: var(--laranja-principal);
-  display: flex;
-  justify-content: space-between;
-  position: fixed;
-  top:0;
-  width: 100vw;
-  z-index: 100;
-}
-
-.logo {
-  height: 100px;
-  margin-left: 30px;
-}
-
-/*Navegação*/
-
-.nav-container{
-  align-items: center;
-  display: flex;
-}
-
-.nav-container ul {
-  padding: 0;
-  padding-right: 30px;
-}
-
-.nav-container li {
-  display: inline;
-  padding: 15px;
-  list-style: none;
-}
-
-.nav-container li:hover {
-  border: 2px solid #fff;
-  border-radius: 10px;
-  padding: 13px;
-  background-color: rgba(255, 255, 255, 0.91);
-}
-
-.nav-container li:hover a {
-  color: rgba(239, 100, 53, 1);
-}
-
-.nav-container li a {
-  color: #fff;
-  font-size: 1.5rem;
-  text-decoration: none;
-  font-family: 'Bubblegum Sans', cursive;
-}
-
-/*------------------------------------------------------------------------*/
 
 
 /*Banner*/
 
 .banner-container {
-  margin-top: 100px;
   text-align: center;
   background-color: rgb(229, 228, 228);
-  padding-top: 60px;
   max-height: 100vh;
   overflow: hidden;
+  position: relative;
 }
 
 .banner-container img {
+  
+  max-width: 80%;
   max-height: 75%;
-  max-width: 75%;
   border-radius: 5px;
+  margin: 130px auto 30px;
 }
 
 .banner-container h1 {
   z-index: 10;
-  position: relative;
-  bottom: 150px;
+  position: absolute;
+  bottom: 50px;
   font-family: 'Bubblegum Sans', cursive;
   letter-spacing: 3px;
   font-size: 3rem;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+}
+
+@media screen and (min-width: 1430px) {
+  .banner-container img{
+    max-height: 80vh;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .banner-container h1{
+    font-size: 2rem;
+    width: 300px;
+    bottom: 10px;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+  }
 }
 
 /*--------------------------------------------------------------------------*/
@@ -351,23 +320,3 @@ body {
 
 
 /*-------------------------------------------------------------------------------*/
-
-/*Footer*/
-
-.footer-container {
-  display: flex;
-  background-color: var(--laranja-principal);
-}
-
-.footer-container img {
- display: relative;
- margin-left: 30px;
-}
-
-.footer-container p {
-  color: #fff;
-  display: inline;
-  align-self: center;
-  margin: 0 auto;
-  transform: translateX(-50%);
-}
