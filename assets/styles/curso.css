@@ -39,14 +39,20 @@ p {
   /* justify-items: center;
   justify-content: center; */
   align-content: center;
+
 }
 
 .image-wrapper {
   height: 90%;
-  width: auto;
+
+  
   display: flex;
   grid-area: 1 / 1 / 2 / 2;
   justify-self: end;
+}
+
+.image-wrapper img {
+  max-height: 450px;
 }
 
 
