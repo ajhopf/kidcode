@@ -116,7 +116,7 @@ p {
 }
 
 .conteudo-container h2 {
-  transform: rotate(270deg) translateY(1200px) translateX(-250px);
+  transform: rotate(270deg) translateY(1400px) translateX(-250px);
   font-size: 3rem;
   font-family: 'Bubblegum Sans', cursive;
   position: absolute;
