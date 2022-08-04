@@ -29,23 +29,32 @@ p {
   text-align: center;
   background-color: rgb(229, 228, 228);
   height: 60vh;
-  top: 104px;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
   margin-top: 104px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 450px;
+  /* justify-items: center;
+  justify-content: center; */
+  align-content: center;
 }
 
 .image-wrapper {
   height: 90%;
   width: auto;
   display: flex;
+  grid-area: 1 / 1 / 2 / 2;
+  justify-self: end;
 }
+
 
 .text-wrapper {
   text-align: center;
   width: 400px;
   margin-left: 100px;
+  grid-area: 1 / 2 / 2 / 3;
 }
 
 .text-wrapper h1 {
