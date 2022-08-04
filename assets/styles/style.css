@@ -4,8 +4,9 @@
 }
 
 /*Fontes
-Nav
+
 font-family: 'Bubblegum Sans', cursive;
+font-family: 'Nunito', sans-serif;
 */
 
 html, body {
@@ -15,6 +16,9 @@ html, body {
   overflow-x: hidden;
 }
 
+p{
+  font-family: 'Nunito', sans-serif;
+}
 /*---------------------------------------------------------------------------*/
 
 
@@ -93,10 +97,14 @@ html, body {
   gap: 30px; 
   margin: 0 auto;
   align-items: center;
+  
 }
 
 
+
 /*Estilização dos cards*/
+
+
 
 .card {
   background-color: #f0a041;

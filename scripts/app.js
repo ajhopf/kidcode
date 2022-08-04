@@ -10,3 +10,12 @@ menu.addEventListener('click', () => {
   nav.classList.toggle('active');
   menu.classList.toggle('is-active');
 });
+
+//código para redirecionar o usuário à pagina de curso ao clicar no primeiro curso
+
+const cursoPrimeiro = document.querySelector('.card.primeiro');
+console.log(cursoPrimeiro);
+
+cursoPrimeiro.addEventListener('click', () => {
+  window.location.href = './curso.html';
+});

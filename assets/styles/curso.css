@@ -1,0 +1,154 @@
+:root {
+  --laranja-principal: rgba(239, 100, 53, 1);
+  --orange-hover: rgb(241, 181, 161);
+}
+
+/*Fontes
+
+font-family: 'Bubblegum Sans', cursive;
+font-family: 'Nunito', sans-serif;
+*/
+
+html, body {
+  margin: 0;
+  /*Esta parte é para não criar scroll para a direita, que estava acontecendo em alguns tamanhos de tela*/
+  max-width: 100%;
+  overflow-x: hidden;
+  
+}
+
+p {
+  font-family: 'Nunito', sans-serif;
+}
+
+/*---------------------------------------------------------------------------*/
+
+/*Banner*/
+
+.banner-container {
+  text-align: center;
+  background-color: rgb(229, 228, 228);
+  height: 60vh;
+  top: 104px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 104px;
+}
+
+.image-wrapper {
+  height: 90%;
+  width: auto;
+  display: flex;
+}
+
+.text-wrapper {
+  text-align: center;
+  width: 400px;
+  margin-left: 100px;
+}
+
+.text-wrapper h1 {
+  font-family: 'Bubblegum Sans', cursive;
+  letter-spacing: 3px;
+  font-size: 3rem;
+  position: relative;
+  top: -80px
+}
+
+.text-wrapper p {
+  font-size: 1.5rem;
+  position: relative;
+  top: -60px;
+}
+
+.text-wrapper a {
+  display: inline-block;
+  text-decoration: none;
+  border: 2px solid var(--laranja-principal);
+  border-radius: 5px;
+  padding: 10px;
+  width: 150px;
+  margin-left: 10px;
+  background-color: #fff;
+  color: var(--laranja-principal);
+  font-size: 1.5rem;
+}
+
+.text-wrapper a:hover{
+  background-color: var(--laranja-principal);
+  color:#fff
+}
+
+
+/*--------------------------------------------------------------------------*/
+
+/*Oportunidade*/
+
+.oportunidade-container {
+  background-color: var(--laranja-principal);
+  height:250px;
+  color: #fff;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.oportunidade-container h2 {
+  display: inline-block;
+  position: relative;
+  width: 400px;
+  margin-right: 100px;
+  font-size: 2.5rem;
+}
+
+.oportunidade-container p {
+  display: inline-block;
+  width: 200px;
+  font-size: 1.025rem;
+}
+
+/*Conteúdo*/
+
+.conteudo-container {
+  text-align: center;
+}
+
+.conteudo-container h2 {
+  transform: rotate(270deg) translateY(1200px) translateX(-250px);
+  font-size: 3rem;
+  font-family: 'Bubblegum Sans', cursive;
+  position: absolute;
+}
+
+.conteudo-container h3 {
+  width: 500px;
+  margin-left: 50%;
+  font-family: 'Bubblegum Sans', cursive;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+}
+
+
+.conteudo-informacoes-container {
+  display: grid;
+  grid-template-columns: repeat(2, 400px);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+  justify-items: center;
+  position: relative;
+  margin: 50px auto;
+}
+
+.conteudo-informacoes-container h4{
+  font-family: 'Bubblegum Sans', cursive;
+  font-size: 2rem;
+  margin: 20px auto;
+
+}
+
+.conteudo-informacoes-container p {
+  width: 300px;
+}

@@ -3,14 +3,25 @@
   --orange-hover: rgb(241, 181, 161);
 }
 
+/*Fontes
+
+font-family: 'Bubblegum Sans', cursive;
+font-family: 'Nunito', sans-serif;
+*/
+
 body {
   margin: 0;
+}
+
+p {
+  font-family: 'Nunito', sans-serif;
 }
 
 /*-----------------------------------------------------------*/
 
 .main-container {
   padding-top: 100px;
+  
 }
 
 /*Imagem de fundo banner*/

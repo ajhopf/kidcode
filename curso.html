@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KidCode | Bem vindo!</title>
+    <link rel="stylesheet" href="./assets/styles/header.css">
+    <link rel="stylesheet" href="./assets/styles/curso.css" />
+    <link rel="stylesheet" href="./assets/styles/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Nunito&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!--Cabeçalho-->
+
+    <header class="header-container">
+      <a href="./index.html"><img class="logo" src="./assets/imagens/logo-laranja.png" /></a>
+      <nav class="nav-container">
+        <ul>
+          <li><a href="#">Sobre nós</a></li>
+          <li><a href="./curso.html">Cursos</a></li>
+          <li><a href="#">Porque programar?</a></li>
+          <li><a href="#">Educadores</a></li>
+          <li><a href="./cadastro.html">Cadastro</a></li>
+          <li><a href="#">Área do Aluno</a></li>
+        </ul>
+      </nav>
+      <!--Esta parte é referente ao menu hamburguer para telas menores-->
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </header>
+
+    <!--Parte principal-->
+    <main>
+      <!--Banner principal do site-->
+      <section class="banner-container">
+        <div class="image-wrapper">
+          <img src="./assets/imagens/cursos/kid-computer.jpg" alt="" />
+        </div>
+        <div class="text-wrapper">
+          
+          <h1>Programação em Scratch</h1>
+          <p>Dê os seus primeiros passos em programação!</p>
+          <a href="./cadastro.html">Inscreva-se</a>
+          <a href="#conteudo">Conteúdo</a>
+        </div>
+      </section>
+
+      <!--Banner de promoção-->
+      <section class="oportunidade-container">
+        <h2>Oportunidade para toda Família!</h2>
+        <p>Ao realizar sua matrícula, você ganha 50% de desconto para um familiar realizar qualquer curso!</p>
+      </section>
+
+      <!--Conteúdo do curso-->
+      <section class="conteudo-container">
+        <h2 >Conteúdo do Curso</h2>
+
+        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. </h3>
+
+        <span id="conteudo"></span>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/bV8pNLmPonE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+        <div class="conteudo-informacoes-container" >
+          <div class="conteudo-informacoes primeiro">
+            <h4>Lorem ipsum</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur sed autem exercitationem tenetur dolor eligendi, voluptates consequatur! </p>
+          </div>
+          <div class="conteudo-informacoes segundo">
+            <h4>Lorem ipsum</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur sed autem exercitationem tenetur dolor eligendi, voluptates consequatur! </p>
+          </div>
+          <div class="conteudo-informacoes terceiro">
+            <h4>Lorem ipsum</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur sed autem exercitationem tenetur dolor eligendi, voluptates consequatur! </p>
+          </div>
+          <div class="conteudo-informacoes quarto">
+            <h4>Lorem ipsum</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur sed autem exercitationem tenetur dolor eligendi, voluptates consequatur! </p>
+          </div>
+        </div>
+
+      </section>
+        
+      
+    </main>
+
+    <!--Footer-->
+    <footer class="footer-container">
+      <img class="logo" src="./assets/imagens/logo-laranja.png" />
+      <p>Copyright Kicode	&#174</p>
+    </footer>
+    <script src="./scripts/app.js"></script>
+  </body>
+</html>
