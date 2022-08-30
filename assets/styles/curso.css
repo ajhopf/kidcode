@@ -88,6 +88,19 @@ p {
 
 /*Conteúdo*/
 
+iframe {
+  width: 560px;
+  height: 315px;
+}
+
+@media screen and (max-width:576px ) {
+  iframe {
+    width: 400px;
+    height: 250px;
+  }
+  
+}
+
 .conteudo-container {
   text-align: center;
 }
@@ -103,27 +116,4 @@ p {
   font-family: 'Bubblegum Sans', cursive;
   transform: translateX(-50%);
   font-size: 2.5rem;
-}
-
-
-.conteudo-informacoes-container {
-  display: grid;
-  grid-template-columns: repeat(2, 400px);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 20px;
-  justify-content: center;
-  justify-items: center;
-  position: relative;
-  margin: 50px auto;
-}
-
-.conteudo-informacoes-container h4{
-  font-family: 'Bubblegum Sans', cursive;
-  font-size: 2rem;
-  margin: 20px auto;
-
-}
-
-.conteudo-informacoes-container p {
-  width: 300px;
 }
