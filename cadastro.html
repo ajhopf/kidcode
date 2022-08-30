@@ -1,65 +1,125 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>KidCode | Cadastro</title>
-      <link rel="stylesheet" href="./assets/styles/header.css">
-      <link rel="stylesheet" href="./assets/styles/cadastro.css" />
-      <link rel="stylesheet" href="./assets/styles/footer.css">
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Nunito&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <!--Header-->
-    <header class="header-container">
-      <a href="./index.html"><img class="logo" src="./assets/imagens/logo-laranja.png" /></a>
-      <nav  class =" nav-container " >
-      <ul>
-        <li> <a  href =" # " > Sobre nós </a> </li >
-        <li> <a  href ="./curso.html" > Cursos </a> </li>
-        <li> <a  href =" # " > Porque programar? </a> </li > 
-        <li> <a  href =" # " > Educadores </a> </li>
-        <li> <a  href =" # " > Cadastro </a> <li>
-        <li> <a  href =" # " > Área do Aluno </a> </li>
-      </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastro_completo.css">
+    <link rel="stylesheet" href="./assets/styles/header.css">
+    <link rel="stylesheet" href="./assets/styles/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Nunito&display=swap" rel="stylesheet">
+    <title>KidCode | Cadastro</title>
+    <link rel="stylesheet" href="./assets/styles/header.css">
+    <link rel="stylesheet" href="./assets/styles/cadastro.css">
+</head>
+
+<body>
+
+<header class="header-container">
+    <a href="./index.html"><img class="logo" src="./assets/imagens/logo-laranja.png" /></a>
+    <nav  class =" nav-container " >
+        <ul>
+            <li> <a  href =" #" > Sobre nós </a> </li >
+            <li> <a  href ="./curso.html" > Cursos </a> </li>
+            <li> <a  href =" # " > Porque programar? </a> </li > 
+            <li> <a  href =" # " > Educadores </a> </li>
+            <li> <a  href =" ./cadastro.html " > Cadastro </a> </li>
+            <li> <a  href =" # " > Área do Aluno </a> </li>
+        </ul>
     </nav>
-    <!--Esta parte é referente ao menu hamburguer para telas menores-->
+ 
     <div class="menu-toggle" id="mobile-menu">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
     </div>
     </header>
     <br>
 
-    <!--Formulário de Cadastro-->
+    
     <main class="main-container">
-      <img class="deep" src="./assets/imagens/imagem-banner.jpg" />
-      <section class="sign-up-container">
-          <h2 class="title-sign-up">Faça seu cadastro!</h2>
-          <br>
-          <p class="registration">Nome Completo:</p>
-          <input class="input" placeholder="Nome completo">
-          <p class="registration">E-mail:</p>
-          <input class="input" placeholder="email@exemplo.com.br">
-          <p class="registration">Crie uma senha:</p>
-          <input class="input" type="password" placeholder="A senha deve conter mais de 8 caracteres">
-          <p class="registration">Repita sua senha:</p>
-          <input class="input" type="password" placeholder="Digite novamente a senha">
-          <br>
-          <br>
-          <br><button class="send">Enviar</button>
-      </section>
+        <section class="sign-up-container">
+            <h2 class="title-sign-up">Faça seu cadastro!</h2>
+            
+            <form action="cadastro_de_usuarios" method="post">
+                
+                <div>
+                    <label for="nome">Nome Completo do Responsável:</label> <br>
+                    <input type="text" size="55em" id="nome" placeholder="Nome Completo" /> 
+                </div>
+                <br>
+                <div>
+                    <label for="email">E-mail:</label>
+                    <input type="email" size="35em" id="email" placeholder="email@exemplo.com.br" />
+                </div>
+                <br>
+                <div>
+                    <label for="nome">Nome do filho(a):</label><br>
+                    <input type="text" size="55em" id="nome" placeholder="Nome do filho(a)"/>
+                </div>   
+                <br> 
+                <div>
+                    <label for="endereco">Digite seu CEP:</label>
+                    <input type="text" 
+                    size="10em"
+                    id="endereco" 
+                    placeholder="00000-000" 
+                    onblur="buscaCEP(this.value)" />
+                </div>
+                <br>
+                <div>
+                    <label for="rua">Rua:</label>
+                    <input type="text" size="45em" id="rua" name="rua" />
+                </div>
+                <br>
+                <div>
+                    <label for="numero">Número:</label>
+                    <input type="text" size="6em" id="numero" name="numero" />
+                </div>
+                <br>
+                <div>
+                    <label for="bairro">Bairro:</label>
+                    <input type="text" size="30em" id="bairro" name="bairro" />
+                </div>
+                <br>
+                <div>
+                    <label for="cidade">Cidade</label>
+                    <input type="text" size="40em" id="cidade" name="cidade" />
+                </div>
+                <br>
+                <div>
+                    <label for="estado">Estado</label>
+                    <input type="text" size="4em" id="estado" name="estado" />
+                </div>
+                <br>
+                <div>
+                    <label for="senha">Senha:</label>
+                    <input type="password" size="25em" id="senha" placeholder="Mínimo de 8 caracteres" />
+                </div>
+                <br>
+                <div>
+                    <label for="senha">Repita sua senha:</label>
+                    <input type="password" size="25em" id="senha" placeholder="Digite novamente a senha" />
+                </div>
+                <br>
+            </form>
+            <br>
+            <button class="send">Enviar</button>
+
+        </section>
     </main>
     <br>
-    <!--Footer-->
+
     <footer class="footer-container">
-      <img class="logo" src="./assets/imagens/logo-laranja.png" />
-      <p>Copyright KidCode	&#174</p>
+        <img class="logo" src="./assets/imagens/logo-laranja.png" />
+        <p>Copyright KidCode	&#174</p>
     </footer>
+    
     <script src="./scripts/app.js"></script>
-  </body>
+    <script src="./scripts/app_cep.js"></script>
+ 
+</body>
+
 </html>

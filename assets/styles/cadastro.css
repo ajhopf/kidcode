@@ -1,111 +1,77 @@
 :root {
-  --laranja-principal: rgba(239, 100, 53, 1);
-  --orange-hover: rgb(241, 181, 161);
+    --laranja-principal: rgba(239, 100, 53, 1);
+    --orange-hover: rgb(241, 181, 161);
 }
-
-/*Fontes
-
-font-family: 'Bubblegum Sans', cursive;
-font-family: 'Nunito', sans-serif;
-*/
-
-body {
-  margin: 0;
-}
-
-p {
+  
+  /*Fontes
+  
+  font-family: 'Bubblegum Sans', cursive;
   font-family: 'Nunito', sans-serif;
+  */
+  
+body {
+    margin: 0;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
 }
-
-/*-----------------------------------------------------------*/
-
+  
 .main-container {
-  padding-top: 100px;
-  
-}
-
-/*Imagem de fundo banner*/
-.deep {
-  max-width: 920px;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  border-radius: 10px;
-  z-index: -1;
-  position: absolute;
-}
-
-
-/*Container do form*/
-.sign-up-container{
-  background: rgba(255, 255, 255, 0.28);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(3.9px);
-  -webkit-backdrop-filter: blur(3.9px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0px 0px 13px -5px #000000;
-  width: 100%;
-  max-width: 600px;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  box-sizing: border-box;
-  padding-top: 30px;
-  padding-bottom: 60px;
-  padding-left: 25px;
-  padding-right: 25px;
-  z-index: 1;
-  position: relative;
-  /*adicionei para o form ficar centralizado*/
-  text-align: center;
-  
+    padding-top: 100px;
 }
 
 .title-sign-up {
-  text-align: center;
-  font-size: 35px;
-  font-style: bold;
-  /* color:rgba(239, 100, 53, 1); */
-  color:rgb(0, 0, 0);
-  font-family: 'Bubblegum Sans', cursive;
-  text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+    text-align: center;
 }
 
-.registration {
-  padding-left: 10px;
-  font-size: 20px;
-  font-family: 'Bubblegum Sans', cursive;
+section {
+    /*display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);*/
+    background: rgba(255, 255, 255, 0.28);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.9px);
+    -webkit-backdrop-filter: blur(3.9px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 13px -5px #000000;
+    width: 100%;
+    max-width: 600px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    padding-left: 25px;
+    padding-right: 25px;
+    z-index: 1;
+    font-family: 'Nunito', sans-serif;
+    /*position: relative;*/
+    /*adicionei para o form ficar centralizado*/
+    /*text-align: center;*/
 }
-
-.input {
-  /* padding-left: 80px; - retirei essa parte para centralizar o texto dentro dos inputs*/
-  width: 300px;
-  text-align: center;
-}
-
-/*Deixei aqui para se quiser estilizar o place-holder depois
-
-.input::placeholder{
-  
-}*/
-
-
-/*Botão para enviar o form*/
 
 .send {
-  background-color: #FBAB7E;
-  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  text-align: center;
-  font-family: 'Bubblegum Sans', cursive;
-  font-size: 20px;
-  filter: grayscale(80%);
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 20px;
+    filter: grayscale(80%);
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
-
+  
 .send:hover{
-  filter: none;
-  cursor: pointer;
+    filter: none;
+    cursor: pointer;
 }
-
