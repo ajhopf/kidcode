@@ -30,7 +30,6 @@ p {
   margin-top: 100px;
 }
 
-
 .banner h1 {
   font-family: 'Bubblegum Sans', cursive;
   letter-spacing: 3px;
@@ -42,63 +41,45 @@ p {
   font-size: 1.5rem;
 }
 
-@media screen and (min-width:1200px) {
-  .banner h1 {
-    font-size: 3rem;
-  }
-}
-
-
-
-
 .banner a {
   text-decoration: none;
   border: 2px solid var(--laranja-principal);
   border-radius: 5px;
-  padding: 10px;
-
   background-color: #fff;
   color: var(--laranja-principal);
   font-size: 1.3rem;
 }
 
-@media screen and (min-width: 1200px) {
-  .banner a {
-    font-size: 1.5rem;
-  }
-}
 .banner a:hover{
   background-color: var(--laranja-principal);
   color:#fff
 }
 
+@media screen and (min-width:1200px) {
+  .banner h1 {
+    font-size: 3rem;
+  }
+
+  .banner a {
+    font-size: 1.5rem;
+  }
+}
+
 
 /*--------------------------------------------------------------------------*/
 
-/*Oportunidade*/
-
-.oportunidade-container {
+.oportunidade {
   background-color: var(--laranja-principal);
-  height:250px;
-  color: #fff;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  display: flex;
+  min-height: 250px;
+  color: #FFF;
 }
 
-.oportunidade-container h2 {
-  display: inline-block;
-  position: relative;
-  width: 400px;
-  margin-right: 100px;
+.oportunidade h2 {
   font-size: 2.5rem;
+  min-width: 400px;
 }
-
-.oportunidade-container p {
-  display: inline-block;
-  width: 200px;
-  font-size: 1.025rem;
+.oportunidade p {
+  font-size: 1.2rem;
 }
 
 /*Conteúdo*/
