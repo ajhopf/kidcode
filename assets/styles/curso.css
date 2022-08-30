@@ -25,66 +25,49 @@ p {
 
 /*Banner*/
 
-.banner-container {
-  text-align: center;
+.banner {
   background-color: rgb(229, 228, 228);
-  height: 60vh;
-  justify-content: center;
-  align-items: center;
-  margin-top: 104px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 450px;
-  align-content: center;
-}
-
-.image-wrapper {
-  height: 90%;  
-  display: flex;
-  grid-area: 1 / 1 / 2 / 2;
-  justify-self: end;
-}
-
-.image-wrapper img {
-  max-height: 450px;
+  margin-top: 100px;
 }
 
 
-.text-wrapper {
-  text-align: center;
-  width: 400px;
-  margin-left: 100px;
-  grid-area: 1 / 2 / 2 / 3;
-}
-
-.text-wrapper h1 {
+.banner h1 {
   font-family: 'Bubblegum Sans', cursive;
   letter-spacing: 3px;
-  font-size: 3rem;
-  position: relative;
-  top: -80px
+  font-size: 2.5rem;
+  font-weight: bold;
 }
 
-.text-wrapper p {
+.banner p {
   font-size: 1.5rem;
-  position: relative;
-  top: -60px;
 }
 
-.text-wrapper a {
-  display: inline-block;
+@media screen and (min-width:1200px) {
+  .banner h1 {
+    font-size: 3rem;
+  }
+}
+
+
+
+
+.banner a {
   text-decoration: none;
   border: 2px solid var(--laranja-principal);
   border-radius: 5px;
   padding: 10px;
-  width: 150px;
-  margin-left: 10px;
+
   background-color: #fff;
   color: var(--laranja-principal);
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
-.text-wrapper a:hover{
+@media screen and (min-width: 1200px) {
+  .banner a {
+    font-size: 1.5rem;
+  }
+}
+.banner a:hover{
   background-color: var(--laranja-principal);
   color:#fff
 }
