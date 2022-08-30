@@ -77,9 +77,13 @@ p {
 .oportunidade h2 {
   font-size: 2.5rem;
   min-width: 400px;
+  font-family:  'Nunito', sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 .oportunidade p {
   font-size: 1.2rem;
+  font-family:  'Nunito', sans-serif;
 }
 
 /*Conteúdo*/
