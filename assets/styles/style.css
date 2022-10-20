@@ -97,7 +97,6 @@ p{
   gap: 30px; 
   margin: 0 auto;
   align-items: center;
-  
 }
 
 
@@ -160,7 +159,7 @@ p{
 @media screen and (min-width:400px){
  
 .card .carga-horaria::before {
-  background-image: url('./assets/imagens/cursos/clock.png');
+  background-image: url('../imagens/cursos/clock.png');
   filter: opacity(0.5);
   background-size: 30px 30px;
   display: inline-block;
@@ -168,7 +167,7 @@ p{
   height: 30px;
   content: '';
   position: absolute;
-  left: 10px;
+  left: 5px;
   transform: translateY(-5px);
 }
 }
